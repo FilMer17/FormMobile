@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormMobile.MainPage"
+             Appearing="ContentPage_Appearing">
+
+    <StackLayout BackgroundColor="#CCC">
+        <Frame BackgroundColor="#CCC" Padding="12">
+            <Label Text="Připoj se!" HorizontalTextAlignment="Center" TextColor="Black" FontSize="52"/>
+        </Frame>
+        
+        <!--Username input-->
+        <Label Text="Uživatelské jméno" TextColor="Black" FontSize="Medium" Padding="7"/>
+        <Entry Placeholder="Uživatelské jméno" Margin="20, 20, 20, 20" Text="{Binding Username}" />
+
+        <!--Password input-->
+        <Label Text="Heslo" TextColor="Black" FontSize="Medium" Padding="7"/>
+        <Label x:Name="checkPass" Text="Neplatné heslo" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Red" Margin="20, 0, 20, 0"/>
+        <Entry Placeholder="Heslo" IsPassword="true" Margin="20, 0, 20, 20" Text="{Binding Password}" TextChanged="Entry_TextChanged" TextColor="Black"/>
+
+        <Button Text="Přihlásit" Clicked="Button_Clicked" />
+    </StackLayout>
+
+</ContentPage>
